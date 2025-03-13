@@ -68,3 +68,20 @@ result = log('log 1')
 print(type(result))
 print(result)
 print('-'*80)
+
+
+data = [1,2,3,4,5,6]
+for element in data:
+    if element < 0:
+        break
+else:
+    print('processing all positive elements')
+print('-'*80)
+
+
+
+
+
+
+
+
