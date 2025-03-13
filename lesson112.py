@@ -26,3 +26,24 @@ print(f.__name__)
 print('='*80)
 
 
+def add(a,b,c):
+    print(f'a={a}')
+    print(f'b={b}')
+    print(f'c={c}')
+    return a+b+c
+
+result = add(1,2,3)
+print(result)
+
+def add(a,b,c):
+    print('initial namespace:', locals())
+    sum_ = a+b+c
+    print('after sum_ namespace:', locals())
+    return a+b+c
+
+result = add(1,2,3)
+print(result)
+
+result = add(10,20,30)
+print(result)
+
