@@ -78,10 +78,18 @@ else:
     print('processing all positive elements')
 print('-'*80)
 
-
-
-
-
+def is_all_positive(data):
+    for element in data:
+        if element < 0:
+            return False
+    return True
+print(is_all_positive([1,2,3,4]))
+print(is_all_positive([10,3,-4,100]))
+print(is_all_positive(range(1,10)))
+print(is_all_positive(range(10,-20, -2)))
+d = {'a':1, 'b':2, 'c':-10}
+print(is_all_positive(d.values()))
+print('-'*80)
 
 
 
