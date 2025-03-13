@@ -59,6 +59,12 @@ def find_max(a, b, c):
 print(find_max(10, 20, 30))
 print('-'*80)
 
-
-
-
+from datetime import datetime
+def log(message):
+    curr_time = datetime.utcnow().isoformat()
+    print(f'{curr_time} - [{message}]')
+log('log 1')
+result = log('log 1')
+print(type(result))
+print(result)
+print('-'*80)
