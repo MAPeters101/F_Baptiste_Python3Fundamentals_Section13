@@ -46,4 +46,19 @@ print(result)
 
 result = add(10,20,30)
 print(result)
+print('-'*80)
+
+def find_max(a, b, c):
+    max_ = a
+    if b>max_:
+        max_=b
+    if c>max_:
+        max_=c
+    return max_
+
+print(find_max(10, 20, 30))
+print('-'*80)
+
+
+
 
