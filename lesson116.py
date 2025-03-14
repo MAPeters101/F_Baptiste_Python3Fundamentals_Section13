@@ -81,10 +81,26 @@ print('-'*80)
 print('-'.join(['a', 'b', 'c']))
 print('-'.join(*['abc']))
 print(','.join(['a', 'b', 'c']))
+print('-'*80)
 
 
+data = [
+    [10, 20, 30],
+    [100, 200, 300],
+    [1000, 2000, 3000]
+]
 
+def process_data(data, item_sep=',', line_sep='\n'):
+    output = ''
 
+    for row in data:
+        row_str = item_sep.join([str(el) for el in row])
+        output = output + row_str + line_sep
+
+    return output
+
+print(process_data(data))
+print('-'*80)
 
 
 
