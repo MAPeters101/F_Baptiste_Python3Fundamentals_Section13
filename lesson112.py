@@ -94,10 +94,18 @@ print('-'*80)
 
 
 def gen_matrix(m, n, default_value):
-    return [[default_value for i in range(m)] for j in range(m)]
+    return [[default_value for i in range(n)] for j in range(m)]
 
 print(gen_matrix(2, 2, 1))
 print(gen_matrix(4, 8, 1))
+
+def gen_matrix(rows, cols, default_value):
+    return [[default_value for i in range(cols)] for j in range(rows)]
+
+print(gen_matrix(2, 2, 1))
+print(gen_matrix(4, 8, 1))
+print(gen_matrix(rows=4, cols=8, default_value=1))
+print(gen_matrix(cols=8, rows=4, default_value=1))
 
 
 
