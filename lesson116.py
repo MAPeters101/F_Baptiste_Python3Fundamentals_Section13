@@ -22,5 +22,18 @@ def is_close(a, b, abs_tol=0.01):
 print(is_close(1.255, 1.256))
 print(is_close(1255, 1256))
 print(is_close(1255, 1256, abs_tol=5))
+print('-'*80)
 
+def parse(s, sep=',', strip=True):
+    items = s.split(sep)
+    if strip:
+        return [item.strip() for item in items]
+    else:
+        return items
 
+print(parse(' a,    b  ,  c  '))
+print(parse(' a,    b  ,  c  ', strip=False))
+print(parse('a:b. : c: d'))
+print(parse('a:b. : c: d', sep=':'))
+print(parse('a\n|b\n|c\n', sep='|'))
+print(parse('a\n|b\n|c\n', sep='|', strip=False))
