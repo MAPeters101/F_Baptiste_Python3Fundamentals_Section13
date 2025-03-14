@@ -93,3 +93,15 @@ print('-'*80)
 
 
 
+def gen_matrix(m, n, default_value):
+    return [[default_value for i in range(m)] for j in range(m)]
+
+print(gen_matrix(2, 2, 1))
+print(gen_matrix(4, 8, 1))
+
+
+
+
+
+
+
