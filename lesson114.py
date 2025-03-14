@@ -84,3 +84,21 @@ def product(*values):
 print(product(1,2,3))
 print(product(1,2,3,4))
 print(product())
+print('-'*80)
+
+def product(*values):
+    if len(values) == 0:
+        raise ValueError('Must provide at least one argument')
+    prod = 1
+    for value in values:
+        prod *= value
+    return prod
+
+print(product(1,2,3))
+print(product(1,2,3,4))
+#print(product())
+print('-'*80)
+
+
+
+
