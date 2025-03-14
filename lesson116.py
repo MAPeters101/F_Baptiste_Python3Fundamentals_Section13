@@ -101,6 +101,44 @@ def process_data(data, item_sep=',', line_sep='\n'):
 
 print(process_data(data))
 print('-'*80)
+print(process_data(data, line_sep='=='))
+print('-'*80)
 
+data = [
+    [10, 20, 30],
+    [100, 200, 300],
+    [1000, 2000, 3000]
+]
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    output = ''
+
+    for row in data:
+        gen = (str(el) for el in row)
+        row_str = item_sep.join(gen)
+        output = output + row_str + line_sep
+
+    return output
+
+print(process_data(data))
+print('-'*80)
+
+data = [
+    [10, 20, 30],
+    [100, 200, 300],
+    [1000, 2000, 3000]
+]
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    output = ''
+
+    for row in data:
+        row_str = item_sep.join(str(el) for el in row)
+        output = output + row_str + line_sep
+
+    return output
+
+print(process_data(data))
+print('-'*80)
 
 
