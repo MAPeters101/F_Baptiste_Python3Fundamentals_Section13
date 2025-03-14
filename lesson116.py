@@ -16,6 +16,11 @@ print('-'*80)
 print(func(1, c=100))
 print('-'*80)
 
+def is_close(a, b, abs_tol=0.01):
+    return abs(a - b) <= abs_tol
 
+print(is_close(1.255, 1.256))
+print(is_close(1255, 1256))
+print(is_close(1255, 1256, abs_tol=5))
 
 
