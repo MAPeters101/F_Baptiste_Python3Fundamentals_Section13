@@ -78,7 +78,9 @@ print('done')
 print('-'*80)
 
 
-
+print('-'.join(['a', 'b', 'c']))
+print('-'.join(*['abc']))
+print(','.join(['a', 'b', 'c']))
 
 
 
