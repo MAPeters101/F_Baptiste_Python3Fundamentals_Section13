@@ -155,6 +155,23 @@ def process_data(data, item_sep=',', line_sep='\n'):
     return row_strings
 
 print(process_data(data))
+print('='*80)
+
+
+data = [
+    [10, 20, 30],
+    [100, 200, 300],
+    [1000, 2000, 3000]
+]
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    row_strings = [
+        item_sep.join(str(el) for el in row)
+        for row in data
+    ]
+    return line_sep.join(row_strings)
+
+print(process_data(data))
 print('-'*80)
 
 
