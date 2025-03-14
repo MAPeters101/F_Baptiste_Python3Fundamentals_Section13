@@ -65,6 +65,16 @@ def process_data(data, item_sep=',', line_sep='\n'):
     return output
 
 print(process_data(data))
+print('-'*80)
+
+print(process_data(data, item_sep='=='))
+print('-'*80)
+
+print(process_data(data, item_sep='==', line_sep='\n\n'))
+
+
+
+
 
 
 
