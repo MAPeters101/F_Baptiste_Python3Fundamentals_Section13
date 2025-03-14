@@ -100,5 +100,18 @@ print(product(1,2,3,4))
 print('-'*80)
 
 
+def product(*values):
+    prod = 1
+    for value in values:
+        prod *= value
+    return prod
+l = [1,2,3,4]
+print(product(l))
+print(product(*l))
+#print(product(1,2,3,4))
+#print(product())
+print('-'*80)
+
+
 
 
