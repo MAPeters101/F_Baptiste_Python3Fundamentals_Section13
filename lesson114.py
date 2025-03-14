@@ -75,4 +75,12 @@ print(averages(1,3,5,7,9,11))
 print(averages(0))
 print('.'*80)
 
+def product(*values):
+    prod = 1
+    for value in values:
+        prod *= value
+    return prod
 
+print(product(1,2,3))
+print(product(1,2,3,4))
+print(product())
