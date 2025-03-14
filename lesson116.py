@@ -192,3 +192,44 @@ print(process_data(data))
 print('-'*80)
 
 
+print(process_data(data, item_sep='|'))
+print('-'*80)
+
+print(process_data(data, item_sep='|', line_sep='\n\n'))
+print('='*80)
+
+
+def process_row(row, item_sep):
+    return item_sep.join(str(el) for el in row)
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    row_strings = (process_row(row, item_sep) for row in data)
+    return line_sep.join(row_strings)
+
+print(process_data(data))
+print('-'*80)
+
+
+print(process_data(data, item_sep='|'))
+print('-'*80)
+
+print(process_data(data, item_sep='|', line_sep='\n\n'))
+print('+'*80)
+
+def process_row(row, item_sep):
+    return item_sep.join(str(el) for el in row)
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    return line_sep.join(process_row(row, item_sep) for row in data)
+
+print(process_data(data))
+print('-'*80)
+
+
+print(process_data(data, item_sep='|'))
+print('-'*80)
+
+print(process_data(data, item_sep='|', line_sep='\n\n'))
+print('='*80)
+
+
