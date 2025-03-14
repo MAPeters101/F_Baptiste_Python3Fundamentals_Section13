@@ -106,6 +106,10 @@ print(gen_matrix(2, 2, 1))
 print(gen_matrix(4, 8, 1))
 print(gen_matrix(rows=4, cols=8, default_value=1))
 print(gen_matrix(cols=8, rows=4, default_value=1))
+print('-'*80)
+#print(gen_matrix(5, rows=4, default_value=1))
+#print(gen_matrix(5, cols=4, 1))
+print(gen_matrix(5, cols=4, default_value=1))
 
 
 
