@@ -59,8 +59,10 @@ data = [
 print(process_data(data, item_sep=':', line_sep='\n\n'))
 print('-'*80)
 
+def coords_to_json(longitude, latitude):
+    return f'{{"longitude": {longitude}, "latitude": {latitude}}}'
 
-
-
+print(coords_to_json(10, 20))
+print(coords_to_json(longitude=10, latitude=20))
 
 
