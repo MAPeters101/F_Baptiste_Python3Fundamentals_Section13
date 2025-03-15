@@ -64,5 +64,12 @@ def coords_to_json(longitude, latitude):
 
 print(coords_to_json(10, 20))
 print(coords_to_json(longitude=10, latitude=20))
+print('-'*80)
 
+def coords_to_json(*, longitude, latitude):
+    return f'{{"longitude": {longitude}, "latitude": {latitude}}}'
+
+#print(coords_to_json(10, 20))
+print(coords_to_json(longitude=10, latitude=20))
+print('-'*80)
 
