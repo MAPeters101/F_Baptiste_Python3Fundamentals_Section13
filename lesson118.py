@@ -41,5 +41,26 @@ data = [
 
 print(process_data(data, ':', '\n\n'))
 print(process_data(data, item_sep=':', line_sep='\n\n'))
+print('-'*80)
+
+
+def process_data(data, *, item_sep=',', line_sep='\n'):
+    row_strings = [item_sep.join([str(element) for element in row])
+                   for row in data]
+    return line_sep.join(row_strings)
+
+data = [
+    [10, 20, 30],
+    [100, 200, 300],
+    [1000, 2000, 3000]
+]
+
+#print(process_data(data, ':', '\n\n'))
+print(process_data(data, item_sep=':', line_sep='\n\n'))
+print('-'*80)
+
+
+
+
 
 
