@@ -105,4 +105,13 @@ def func(data1, data2, arg1, arg2, arg3, arg4):
     # expecting data1, data2, arg1, arg2, arg3, arg4
     pass
 
+def to_json(arg1, *, kw1, **extras):
+    formatted_extras = ', '.join([f'"{key}": {value}' for key, value in extras.items()])
+    result = f'{{"arg1": {arg1}, "kw1": {kw1}, "extras": {{{formatted_extras}}}}}'
+    return result
+
+print(to_json(10, kw1=20, a=1, b=2, c=3))
+# {"arg1": 10, "kw1": 20,"extras": {"a": 1, "b": 2, "c": 3}}
+
+
 
