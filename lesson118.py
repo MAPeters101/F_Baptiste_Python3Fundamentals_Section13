@@ -73,3 +73,23 @@ def coords_to_json(*, longitude, latitude):
 print(coords_to_json(longitude=10, latitude=20))
 print('-'*80)
 
+def func(a, b, *args, c, d, **kwargs):
+    print(a)
+    print(b)
+    print(args)
+    print(c)
+    print(d)
+    print(kwargs)
+
+func(10, 20, 30, 40, 50, c=1, d=2, x=100, y=100)
+func(c=1, d=2, x=100, y=200, a=10, b=20)
+#func(20, 30, c=1, d=2, x=100, y=200, a=10, b=20)
+#func(a=10, b=20, 20, 30, c=1, d=2, x=100, y=200)
+
+
+
+
+
+
+
+
