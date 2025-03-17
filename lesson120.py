@@ -47,3 +47,6 @@ print(f('a'))
 print(f('a', 10))
 print('-'*80)
 
+f = lambda a, *args: a * max(args)
+print(f(10, 1,2,-1))
+
