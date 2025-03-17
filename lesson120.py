@@ -40,8 +40,10 @@ f = lambda rows, cols: [
 print(f(5,5))
 print('='*80)
 
+f = lambda a=0, b=2: a * b
 
-
-
-
+print(f(10))
+print(f('a'))
+print(f('a', 10))
+print('-'*80)
 
