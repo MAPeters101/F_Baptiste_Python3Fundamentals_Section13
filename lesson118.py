@@ -85,11 +85,24 @@ func(10, 20, 30, 40, 50, c=1, d=2, x=100, y=100)
 func(c=1, d=2, x=100, y=200, a=10, b=20)
 #func(20, 30, c=1, d=2, x=100, y=200, a=10, b=20)
 #func(a=10, b=20, 20, 30, c=1, d=2, x=100, y=200)
+print('-'*80)
 
+def func(**kwargs):
+    return kwargs['a'] + kwargs['b']
 
+print(func(a=10, b=20, c=30))
 
+def func(*, a, b):
+    return a + b
 
+print(func(a=10, b=20))
 
+def func(**kwargs):
+    # expecting data1, data2, arg1, arg2, arg3, arg4
+    pass
 
+def func(data1, data2, arg1, arg2, arg3, arg4):
+    # expecting data1, data2, arg1, arg2, arg3, arg4
+    pass
 
 
