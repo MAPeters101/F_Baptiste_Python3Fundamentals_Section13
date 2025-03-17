@@ -24,3 +24,15 @@ def f2(a,b,c):
 
 print(f1(1,2,3), f2(1,2,3))
 print('-'*80)
+
+
+def identity(rows, cols):
+    return [
+        [1 if row == col else 0 for col in range(cols)]
+        for row in range(rows)
+    ]
+
+print(identity(5,5))
+
+
+
