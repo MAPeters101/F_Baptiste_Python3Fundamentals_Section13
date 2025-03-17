@@ -15,6 +15,12 @@ print(add)
 print(f)
 print()
 print(f(10, 20))
+print('-'*80)
 
+f1 = lambda a, b, c: max(a,b,c)
 
+def f2(a,b,c):
+    return max(a,b,c)
 
+print(f1(1,2,3), f2(1,2,3))
+print('-'*80)
